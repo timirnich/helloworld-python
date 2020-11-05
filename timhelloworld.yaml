@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: timhelloworld
+  name: timhelloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: timhelloworld
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: timhelloworld
+    spec:
+      containers:
+      - image: timirnich/timhelloworld:0.5
+        name: timhelloworld
+        resources: {}
+status: {}

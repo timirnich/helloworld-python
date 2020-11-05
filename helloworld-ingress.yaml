@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: timhelloworld-ingress
+spec:
+  rules:
+  - host: timhelloworld.192.168.33.11.xip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: timhelloworld
+          servicePort: 8080
