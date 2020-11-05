@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -d "/home/coder/workspace/helloworld-python" ] 
+then
+  git clone git@github.com:timirnich/helloworld-python.git /home/coder/workspace/helloworld-python
+else
+  echo "Project has already been cloned."
+fi
